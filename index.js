@@ -4,9 +4,9 @@ var menuLinks = [
     { text: 'catalog', href: '/catalog' },
     { text: 'orders', href: '/orders' },
     { text: 'account', href: '/account' },
-  ];
+];
 
-// ======================== Part 1: Getting Started =======================
+// ====================================================== Part 1: Getting Started ========================================================================
 
 //* Select and cache the <main> element in a variable named mainEl.
 const mainEl = document.querySelector("main");
@@ -26,7 +26,7 @@ mainEl.classList.add("flex-ctr");
 
 
 
-// ======================== Part 2: Creating a Menu Bar =======================
+// ====================================================== Part 2: Creating a Menu Bar ======================================================================
 
 //* Select and cache the <nav id="top-menu"> element in a variable named topMenuEl.
 const topMenuEl = document.getElementById("top-menu");
@@ -44,4 +44,29 @@ topMenuEl.classList.add("flex-around");
 
 
 
-// ======================== Part 3: Adding Menu Buttons =======================
+// ====================================================== Part 3: Adding Menu Buttons =======================================================================
+
+//* Iterate over the entire menuLinks array and for each "link" object:
+// for (let i = 0; i < menuLinks.length; i++) {
+//     const element = menuLinks[i];
+//     console.log(element);
+// }
+
+// Iterate over it using forEach function
+menuLinks.forEach(link => {
+    //* Create an <a> element.
+    const linkEl = document.createElement("a");
+
+    //* On the new element, add an href attribute with its value set to the href property of the "link" object.
+    linkEl.setAttribute("href", link.href);
+    console.log(linkEl);
+
+    //* Set the new element's content to the value of the text property of the "link" object.
+    linkEl.textContent = link.text;
+
+    //* Append the new element to the topMenuEl element.
+    topMenuEl.appendChild(linkEl);
+});
+
+
+

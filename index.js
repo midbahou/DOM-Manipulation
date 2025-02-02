@@ -48,7 +48,7 @@ topMenuEl.classList.add("flex-around");
 
 //* Iterate over the entire menuLinks array and for each "link" object:
 // for (let i = 0; i < menuLinks.length; i++) {
-//     const element = menuLinks[i];
+    //     const element = menuLinks[i];
 //     console.log(element);
 // }
 
@@ -70,3 +70,32 @@ menuLinks.forEach(link => {
 
 
 
+
+// ====================================================== R-ALAB 316.3.1: DOM Manipulation (Part Two) =======================================================================
+
+        // ====================================================== Part 3: Creating the Submenu =======================================================================
+        
+        //*TODO: Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
+        const subMenuEl = document.getElementById("sub-menu");
+console.log(subMenuEl);
+
+//*TODO: Set the height subMenuEl element to be "100%".
+subMenuEl.style.height = "100%";
+
+//*TODO: Set the background color of subMenuEl to the value stored in the --sub-menu-bg CSS custom property.
+subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+
+//*TODO: Add the class of flex-around to the subMenuEl element.
+subMenuEl.classList.add("flex-around");
+
+//* Now, change the position of the submenu to temporarily hide it. Later, we will make the submenu appear dynamically based on user interaction:
+//*TODO: Set the CSS position property of subMenuEl to the value of absolute.
+subMenuEl.style.position = "absolute";
+
+//*TODO: Set the CSS top property of subMenuEl to the value of 0.
+subMenuEl.style.top = "0";
+
+
+
+
+// ====================================================== Part 4: Adding Menu Interaction =======================================================================
